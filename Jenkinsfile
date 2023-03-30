@@ -23,6 +23,7 @@ pipeline {
         stage('Finalize') {
             steps {
 		bat 'docker-compose down'
+		bat 'docker tag flaskwog manor513/flaskwog'
 		bat 'docker push manor513/flaskwog:latest'
             }
         }
