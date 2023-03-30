@@ -18,8 +18,8 @@ def test_scores_service(app_url):
 
 def main_function():
     try:
-        test_scores_service('http://127.0.0.1:5000/')
-        if test_scores_service('http://127.0.0.1:5000/'):
+        test_scores_service('http://127.0.0.1:8777/')
+        if test_scores_service('http://127.0.0.1:8777/'):
             return 0
         else:
             return -1
