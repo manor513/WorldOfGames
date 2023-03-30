@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  main_scores:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - C:/Users/manor/Desktop/Python/WorldOfGames/Scores.txt:/Scores.txt
+
