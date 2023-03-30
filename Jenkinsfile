@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-    	DOCKERHUB_CREDENTIALS=credentials('dockerhub')
+		DOCKERHUB_CREDENTIALS=credentials('dockerhub')
 	}
 
     stages {
@@ -26,9 +26,10 @@ pipeline {
 
         stage('Finalize') {
             steps {
-                bat 'docker-compose down'
-		bat 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+	    	bat 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
 		bat 'docker push manor513/worldofgames-app:latest'
+		bat 'docker-compose down'
+                
             }
         }
     }
