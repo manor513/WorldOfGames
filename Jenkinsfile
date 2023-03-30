@@ -22,7 +22,7 @@ pipeline {
 
         stage('Finalize') {
             steps {
-		bat 'docker push manor513/worldofgames-app:latest'
+		bat 'docker push manor513/worldofgames:latest'
 		bat 'docker-compose down'
             }
         }
