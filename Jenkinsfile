@@ -23,6 +23,8 @@ pipeline {
         stage('Finalize') {
             steps {
                 bat 'docker-compose down'
+				bat 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+				bat 'docker push manor513/worldofgames-app:latest'
             }
         }
     }
