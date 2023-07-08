@@ -3,7 +3,7 @@ import os
 
 
 def scores_file_name():
-    scores_file_path = 'C:/Users/manor/Desktop/Python/WorldOfGames/Scores.txt'
+    scores_file_path = '/Scores.txt'
     return scores_file_path
 
 
