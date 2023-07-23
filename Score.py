@@ -3,7 +3,7 @@ import os
 
 
 def add_score():
-    file_path = Utils.scores_file_name()
+    file_path = Utils.scores_file_name_win()
     if os.path.exists(file_path):
         with open(file_path, 'r') as file:
             number = int(file.read())
