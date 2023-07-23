@@ -7,6 +7,11 @@ def scores_file_name():
     return scores_file_path
 
 
+def scores_file_name_win():
+    scores_file_path_win = 'C:/Users/manor/Desktop/Python/WorldOfGames/Scores.txt'
+    return scores_file_path_win
+
+
 def bad_return_code():
     bad_return_number = '400'
     return bad_return_number
